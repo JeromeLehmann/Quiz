@@ -14,15 +14,18 @@ s="Hello Mr. Smith"
 - [x] ['Hello', 'Mr.']
 
 Explanation:
-  + * takes the rest of the returned values into an array, even if the sign is placed before the other results
+  + The sign * takes the rest of the returned values into an array, even if the sign is placed before the other results
 
 #### (1pt) Q2. How to use the Morse operator in Python 3.8?
 
-- [ ] a := 3 // Assigns 3 and forces it to be an number
-- [ ] a := [1,2] // Takes a List and converts to Dictionary
-- [ ] a := 0 // When value=0, assigns NULL
-- [x] if(a:=0 > 0): print("Positive") // Affects a value inside an instruction
+- [ ] a := 3      # Assigns 3 and forces it to be an number
+- [ ] a := [1,2]  # Takes a List and converts to Dictionary
+- [ ] a := 0      # When value=0, assigns NULL
+- [x] if(a:=0 > 0): print("Positive") # Affects a value inside an instruction
 - [ ] The Morse operator doesn't exist, but the Pinguin operator does
+
+Explanation:
+  + The Morse operator can be used in If, For, etc...
 
 #### Q3. (1pt) What is the value of list(set([2,1,1]))?
 
