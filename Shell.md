@@ -7,17 +7,17 @@ a=foo
 b=a
 ```
 
-- [ ] eval echo $$b
-- [ ] eval echo ${$b}
-- [x] eval echo \$$b
-- [x] eval echo '$'$b
+- [ ] ```bash eval echo $$b```
+- [ ] ```bash eval echo ${$b}```
+- [x] ```bash eval echo \$$b```
+- [x] ```bash eval echo '$'$b```
 - [ ] This is not possible
 
 Explanation:
-  - $$ gives the PID, so "echo $$b" or "eval echo $$b" returns for example: 6139b
-  - ${$var} is incorrect, so "echo ${$b}" or "eval echo ${$b}" will raise: "bash: ${$b}: bad substitution"
-  + But "eval echo \$$b" means "eval echo $a" which returns "foo"
-  ! Warning: This may look particular comparing to the above, but "echo $b" returns "a", and "echo \$$b" returns "$a"
+  - ```bash $$``` gives the PID, so ```bash echo $$b``` or ```bash eval echo $$b``` returns for example: 6139b
+  - ```bash ${$var}``` is incorrect, so ```bash echo ${$b}``` or ```bash eval echo ${$b}``` will raise: ```bash bash: ${$b}: bad substitution```
+  + But ```bash eval echo \$$b``` means ```bash eval echo $a``` which returns "foo"
+  ! Warning: This may look particular comparing to the above, but ```bash echo $b``` returns "a", and ```bash echo \$$b``` returns ```bash $a```
 
 Further reading: https://linuxhint.com/bash_eval_command
 
